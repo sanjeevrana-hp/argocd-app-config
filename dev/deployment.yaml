@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx
-  namespace: default
+  name: my-nginx-argo
+  namespace: argo-test-ns
 spec:
   selector:
     matchLabels:
-      run: my-nginx
+      run: my-nginx-argo
   replicas: 1
   template:
     metadata:
       labels:
-        run: my-nginx
+        run: my-nginx-argo
     spec:
       containers:
-      - name: my-nginx
+      - name: my-nginx-argo
         image: nginx
         ports:
         - containerPort: 80
