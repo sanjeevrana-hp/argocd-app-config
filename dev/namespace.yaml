@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: flux-test-ns
+  name: argo-test-ns
