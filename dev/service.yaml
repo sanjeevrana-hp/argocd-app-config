@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-nginx
-  namespace: default
+  name: my-nginx-argo-svc
+  namespace: argo-test-ns
   labels:
-    run: my-nginx
+    run: my-nginx-argo
 spec:
   ports:
   - port: 80
     protocol: TCP
-  type: LoadBalancer
+  type: NodePort
   selector:
-    run: my-nginx
+    run: my-nginx-argo
